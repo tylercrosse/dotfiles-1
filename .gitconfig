@@ -28,28 +28,28 @@
 	# diffFilter = "diff-so-fancy"
 
 # so much color
-[color]
-	ui = always
-[color "diff"]
-	meta = yellow bold
-	commit = green bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = "red bold 52"
-	newNormal = "green bold"
-	newHighlight = "green bold 22"
+# [color]
+# 	ui = always
+# [color "diff"]
+# 	meta = yellow bold
+# 	commit = green bold
+# 	frag = magenta bold
+# 	old = red bold
+# 	new = green bold
+# 	whitespace = red reverse
+# [color "diff-highlight"]
+# 	oldNormal = red bold
+# 	oldHighlight = "red bold 52"
+# 	newNormal = "green bold"
+# 	newHighlight = "green bold 22"
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+	current = green reverse
+	local = green
+	remote = yellow
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+	added = green
+	changed = yellow
+	untracked = red
 
 # git mergetool
 [merge]
@@ -69,7 +69,7 @@
 [url "git@gist.github.com:"]
 	pushInsteadOf = "gist:"
 	pushInsteadOf = "git://gist.github.com/"
-	
+
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
 
@@ -85,6 +85,10 @@
 # use separate file for username / github token / etc
 [include]
   path = ~/.gitconfig.local
+
+[user]
+	name = Tyler Crosse
+	email = tylerscottcrosse@gmail.com
 
 #[init]
 #	templatedir = ~/.git_template
