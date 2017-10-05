@@ -24,7 +24,7 @@ function killf
   end
 end
 
-function clone --description "clone something, cd into it. install it."
+function gc --description "clone something, cd into it. install it."
     git clone --depth=1 $argv[1]
     cd (basename $argv[1] | sed 's/.git$//')
     yarn install
@@ -60,10 +60,13 @@ function shellswitch
 	chsh -s (brew --prefix)/bin/$argv
 end
 
+# function code
+#   env VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCodeInsiders" --args $argv
+# end
 function code
-  env VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCodeInsiders" --args $argv
+  set location "$PWD/$argv"
+  open -n -b "com.microsoft.VSCode" --args $location
 end
-
 
 function fuck -d 'Correct your previous console command'
     set -l exit_code $status

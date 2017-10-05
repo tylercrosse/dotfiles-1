@@ -36,14 +36,16 @@ alias agc='ag --color-line-number "2;39" --color-match "30;42" --color-path "1;4
 
 alias tre="tree -CshDL 1" # -L one level deep
 alias tre2="tree -CshDLI 2 'node_modules'" # -L two levels deep excluding node_modules
-alias tre3="tree -CshDLI 3 'node_modules'" # -L two levels deep
+alias tre3="tree -CshDLI 3 'node_modules'" # -L three levels deep excluding node_modules
 alias tred="tree -CshDd" # -d directories only
+alias tred2="tree -CshDdLI 2 'node_modules'" # -d directories only, two levels deep excluding node_modules
+alias tred3="tree -CshDdLI 3 'node_modules'" # -d directories only, three levels deep excluding node_modules
 alias trea="tree -CshDaL 1" # -L one level deep, including '.' files
-alias trea2="tree -CshDaLI 2" # -L two levels deep, including '.' files
+alias trea2="tree -CshDaL 2" # -L two levels deep, including '.' files
 alias trea3="tree -CshDaL 3" # -L two levels deep, including '.' files
 alias treaa="tree -CshDa" # -a all including '.' files
 alias tree="tree -CshD" # Color, size, date
-alias treee="tree"
+alias treee="tree" # default behaviour - NOTE 'command tree' is the same
 
 alias diskspace_report="df -P -kHl"
 alias free_diskspace_report="diskspace_report"

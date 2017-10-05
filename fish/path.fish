@@ -22,6 +22,7 @@ end
 # 	set PA $PA /Users/paulirish/.rvm/gems/ruby-2.2.1/bin
 # end
 
+gulp --completion=fish | source
 
 set -l paths "
 # yarn binary
