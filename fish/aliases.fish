@@ -32,7 +32,8 @@ alias push="git push"
 
 # brew install the_silver_searcher
 alias ag='ag --follow --hidden'
-alias agc='ag --color-line-number "2;39" --color-match "30;42" --color-path "1;4;37"'
+# custom colors and max line length of 80
+alias agc='ag --width 80 --color-line-number "2;39" --color-match "30;42" --color-path "1;4;37"'
 
 alias tre="tree -CshDL 1" # -L one level deep
 alias tre2="tree -CshDLI 2 'node_modules'" # -L two levels deep excluding node_modules
