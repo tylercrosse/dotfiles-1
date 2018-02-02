@@ -43,6 +43,14 @@ function md --wraps mkdir -d "Create a directory and cd into it"
   end
 end
 
+# requires highlight - brew install highlight
+function les --d "Less with syntax highlighting"
+  set hilite (which highlight)
+  set -x LESSOPEN "| $hilite %s --out-format xterm256 --line-numbers --quiet --force --style solarized-dark"
+  set -x LESS " -R"
+  command less -m -N -g -i -J --line-numbers --underline-special $argv
+end
+
 function gz --d "Get the gzipped size"
   echo "orig size    (bytes): "
   cat "$argv[1]" | wc -c

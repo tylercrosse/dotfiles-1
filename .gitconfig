@@ -15,7 +15,7 @@
 	reup = rebase-update # depot_tools specific
 
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/tcrosse/.gitignore
 	attributesfile = ~/.gitattributes
 
 [pager]
@@ -106,3 +106,9 @@
 	fetch = +refs/heads/*:refs/remotes/origin/*
 [stash]
 	showPatch = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

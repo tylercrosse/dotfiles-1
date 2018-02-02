@@ -13,17 +13,10 @@ function g        ; git $argv ; end
 function grep     ; command grep --color=auto $argv ; end
 
 
-
 # mv, rm, cp
 alias mv 'command gmv --interactive --verbose'
 alias rm 'command grm --interactive --verbose'
 alias cp 'command gcp --interactive --verbose'
-
-
-
-
-
-alias push="git push"
 
 
 ############################################
@@ -77,9 +70,8 @@ alias gh="git-open"
 
 alias gbdm="git branch --merged | egrep -v '(^\*|master|dev)' | xargs git branch -d"
 
-alias gl="git log --all --oneline --graph --decorate"
-alias gla='git log --all --decorate --graph --pretty=format:"%C(yellow)%h%Creset %C(auto)%d%Creset %Cblue%ar%Creset %Cred%an%Creset %n%w(72,1,2)%s"'
-alias gpr="git log --pretty=format:'%Cblue%h%Creset %Cgreen%ad%Creset | %s%C(yellow)%d%Creset [%an]' --graph --date=short --decorate"
+alias gl="git log --all --oneline --graph --decorate --date=relative --pretty=format:'%C(bold blue)%h%C(reset)%C(auto)%d%C(reset) %<(50,trunc)%s%C(reset) %C(green)(%ar)%C(reset) %C(dim white)- %an%C(reset)'"
+alias glg="git log --all --oneline --graph --decorate"
 
 # github-email <user> https://github.com/paulirish/github-email
 # diffshot https://github.com/RobertAKARobin/diffshot
