@@ -122,6 +122,6 @@ alias update_brew_npm_gem='brew_update; npm install npm -g; npm update -g; sudo 
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias dig="dig +nocmd any +multiline +noall +answer"
 # wget sucks with certificates. Let's keep it simple.
-alias wget="curl -O"
+# alias wget="curl -O"
 
 alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
