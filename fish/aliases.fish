@@ -87,6 +87,8 @@ alias glg="git log --all --oneline --graph --decorate"
 #  Other Aliases
 ##############################
 
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+
 alias chmox='chmod +x'
 
 alias cask='brew cask' # i <3 u cask
