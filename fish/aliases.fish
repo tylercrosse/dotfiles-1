@@ -57,8 +57,8 @@ alias gba="git branch -a"
 alias gch="git checkout"
 alias gcb="git checkout -b"
 
-alias gd="git diff"
-alias gdc="git diff --cached"
+alias gd="git diff ':(exclude)package-lock.json'"
+alias gdc="git diff --cached ':(exclude)package-lock.json'"
 
 alias ga="git add"
 alias gs="git status"
@@ -72,6 +72,8 @@ alias gbdm="git branch --merged | egrep -v '(^\*|master|dev)' | xargs git branch
 
 alias gl="git log --all --oneline --graph --decorate --date=relative --pretty=format:'%C(bold blue)%h%C(reset)%C(auto)%d%C(reset) %<(50,trunc)%s%C(reset) %C(green)(%ar)%C(reset) %C(dim white)- %an%C(reset)'"
 alias glg="git log --all --oneline --graph --decorate"
+
+alias svl="svn log | perl -l40pe 's/^-+/\n/'"
 
 # github-email <user> https://github.com/paulirish/github-email
 # diffshot https://github.com/RobertAKARobin/diffshot

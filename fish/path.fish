@@ -22,6 +22,13 @@ end
 # 	set PA $PA /Users/paulirish/.rvm/gems/ruby-2.2.1/bin
 # end
 
+# set -U fish_user_paths ~/anaconda3/bin $fish_user_paths
+
+# Anaconda per https://conda.io/docs/user-guide/install/linux.html
+# source (conda info --root)/etc/fish/conf.d/conda.fish
+source /Users/tcrosse/anaconda3/etc/fish/conf.d/conda.fish
+
+# gulp completion
 gulp --completion=fish | source
 
 set -l paths "

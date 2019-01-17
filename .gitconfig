@@ -1,9 +1,11 @@
 [alias]
-	c = commit -am
+	a = add
+  co = commit
+  cm = commit -m
+	coa = commit --amend
 	fpush = push --force
 	s = status
 	sclone = clone --depth=1
-	amend = commit --amend --all
 	hreset = reset --hard
 	ch = checkout
 	df = diff --color --color-words --abbrev

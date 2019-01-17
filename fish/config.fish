@@ -20,6 +20,7 @@ set fish_function_path $HOME/.config/fish/functions/pure $fish_function_path
 
 export GOPATH=$HOME/.go/
 
+
 # Completions
 function make_completion --argument-names alias command
     echo "
@@ -100,4 +101,9 @@ set -gx LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 # tabtab source for yarn package
 # uninstall by removing these lines or running `tabtab uninstall yarn`
 [ -f $HOME/.config/yarn/global/node_modules/tabtab/.completions/yarn.fish ]; and . $HOME/.config/yarn/global/node_modules/tabtab/.completions/yarn.fish
-rvm default
+# rvm default
+
+# asdf
+source ~/.asdf/asdf.fish
+
+set -U fish_user_paths ~/anaconda3/bin $fish_user_paths
