@@ -4,6 +4,9 @@ set nocompatible
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
 
+" Set runtimepath"
+set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME
+
 " TODO: Load plugins here (pathogen or vundle)
 
 " Turn on syntax highlighting
@@ -93,11 +96,11 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 " Color scheme (terminal)
 set t_Co=256
 set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
+" let g:solarized_termcolors=256
+" let g:solarized_termtrans=1
 " put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
 " in ~/.vim/colors/ and uncomment:
-colorscheme solarized
+" colorscheme solarized
 
 " Enable syntax highlighting for JSDoc
 let g:javascript_plugin_jsdoc = 1
@@ -108,5 +111,4 @@ call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'pangloss/vim-javascript'
 " Plug 'isruslan/vim-es6'
-
-
+Plug 'sheerun/vim-polyglot'
