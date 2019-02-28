@@ -53,7 +53,10 @@ alias master="git checkout master"
 alias g="git"
 
 alias gb="git branch"
-alias gba="git branch -a"
+alias gba="git branch -a" # all branches
+# all branches sorted by date
+alias gbad="git for-each-ref --sort='-authordate:iso8601' --color=auto --format=' %(authordate:relative)%09%1B[0;32m%(refname:short)%1B[m' refs/heads; git for-each-ref --sort='-authordate:iso8601' --color=auto --format=' %(authordate:relative)%09%1B[0;33m%(refname)%1B[m' refs/remotes"
+
 alias gch="git checkout"
 alias gcb="git checkout -b"
 
