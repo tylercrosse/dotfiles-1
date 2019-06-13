@@ -107,3 +107,5 @@ set -gx LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 source ~/.asdf/asdf.fish
 
 set -U fish_user_paths ~/anaconda3/bin $fish_user_paths
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/tcrosse/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/tcrosse/Downloads/google-cloud-sdk/path.fish.inc'; end
